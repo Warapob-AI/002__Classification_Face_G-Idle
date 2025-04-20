@@ -1,0 +1,9 @@
+tensorflow
+tf-keras 
+scikit-learn 
+gradio 
+deepface 
+matplotlib 
+numpy 
+joblib 
+opencv-python
