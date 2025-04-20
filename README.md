@@ -1,6 +1,6 @@
 # การจดจำใบหน้าสมาชิกวง (G)I-DLE
 
-โปรเจคนี้ใช้ Machine Learning และ Deep Learning ในการตรวจจับและจดจำใบหน้าของสมาชิกวง (G)I-DLE โดยใช้ SVM (Support Vector Machine) และ DeepFace เพื่อดึงคุณลักษณะจากใบหน้า
+โปรเจคนี้ใช้ Machine Learning ในการตรวจจับและจดจำใบหน้าของสมาชิกวง (G)I-DLE โดยใช้ SVM (Support Vector Machine) และ DeepFace เพื่อดึงคุณลักษณะจากใบหน้า
 
 ## คุณสมบัติหลัก
 - ตรวจจับใบหน้าจากภาพโดยใช้โมเดล Caffe SSD
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ### 2. ทดสอบโมเดลกับภาพใหม่
 ```bash
-predict_new_image('test_image.png')
+predict_new_image('test_image.png', model)
 
 # ใส่ภาพลงไปใน predict_new_image()
 ```
@@ -32,21 +32,6 @@ predict_new_image('test_image.png')
 - ตรวจจับใบหน้าในภาพที่ระบุ
 - ทำนายว่าเป็นสมาชิกคนใดจากวง (G)I-DLE
 - แสดงผลลัพธ์พร้อมภาพ
-
-## โครงสร้างไฟล์
-```
-├── minnie_face/          # โฟลเดอร์เก็บภาพ Minnie
-├── miyeon_face/          # โฟลเดอร์เก็บภาพ Miyeon
-├── shuhua_face/          # โฟลเดอร์เก็บภาพ Shuhua
-├── yuqi_face/            # โฟลเดอร์เก็บภาพ Yuqi
-├── soyeon_face/          # โฟลเดอร์เก็บภาพ Soyeon
-├── train.py              # ไฟล์สำหรับฝึกโมเดล
-├── predict.py            # ไฟล์สำหรับทำนายภาพใหม่
-├── deploy.prototxt       # ไฟล์ Caffe SSD Model
-├── res10_300x300_ssd_iter_140000.caffemodel  # ไฟล์โมเดลตรวจจับใบหน้า
-├── requirements.txt      # รายการไลบรารีที่ต้องติดตั้ง
-└── README.md             # คำอธิบายโปรเจคนี้
-```
 
 ## หมายเหตุ
 - แนะนำให้ใช้รูปภาพที่มีใบหน้าชัดเจน ไม่มีสิ่งกีดขวาง เช่น แว่นตาหรือหมวก
